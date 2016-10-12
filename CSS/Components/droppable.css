@@ -1,0 +1,8 @@
+﻿.droppable-tall-box {
+    width: 400px;
+    height: 400px;
+    padding: 0.5em;
+    float: left;
+    margin: 10px;
+    border: 1px solid #e96715;
+}

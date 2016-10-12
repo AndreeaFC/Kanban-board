@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html ng-app="mainModule">
 <head>
-    <title></title>
+    <title>Kanban board</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta charset="utf-8" />
     <link href="CSS/master.css" rel="stylesheet" />
@@ -13,7 +13,8 @@
     <main class="container-fluid no-whitespace" ng-view></main>
 
     <!-- 3rd party libs and frameworks -->
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/jquery-ui-1.12.1.min.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/angular.js"></script>
     <script src="Scripts/angular-route.js"></script>
@@ -23,6 +24,11 @@
 
     <!-- Routes -->
     <script src="Scripts/Routes/route.js"></script>
+
+    <!-- Components -->
+    <script src="Scripts/Components/Progressbar/progressbar.component.js"></script>
+    <script src="Scripts/Components/Draggable/draggable.component.js"></script>
+    <script src="Scripts/Components/Droppable/droppable.component.js"></script>
 
     <!-- Controllers -->
     <script src="Scripts/Controllers/main.controller.js"></script>

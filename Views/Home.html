@@ -1,1 +1,44 @@
-﻿Hello there AngularBaseApp!
+﻿<!-- display notes -->
+<div class="col-md-12">
+    <draggable id="1" body="'Note1'"></draggable>
+    <draggable id="2" body="'Note2'"></draggable>
+    <draggable id="3" body="'Note3'"></draggable>
+    <draggable id="4" body="'Note4'"></draggable>
+    <draggable id="5" body="'Note5'"></draggable>
+    <draggable id="6" body="'Note6'"></draggable>
+</div>
+
+<!-- add note -->
+<!--<div class="col-md-12">
+    <button type="button"
+            class="btn btn-toolbar"
+            data-toggle="modal"
+            data-target="#newNoteModal">
+        <span class="glyphicon glyphicon-plus"></span> Add note
+    </button>
+    <div class="col-md-4" ng-repeat="scope in notes track by $index">
+        <p ng-bind="scope.body"></p>
+    </div>
+</div>-->
+
+<!-- starting Kanban board -->
+<div class="col-md-12 pager page-header">
+    <h3 ng-bind="title"></h3>
+</div>
+<div class="col-md-12">
+    <table class="col-md-12">
+        <tr>
+            <th class="col-md-4 pager jumbotron span6">ToDo</th>
+            <th class="col-md-4 pager jumbotron span6">WIP</th>
+            <th class="col-md-4 pager jumbotron">Done</th>
+        </tr>
+        <tr>
+            <td><droppable id="1"></droppable></td>
+            <td><droppable id="2"></droppable></td>
+            <td><droppable id="3"></droppable></td>
+        </tr>
+    </table>
+</div>
+
+<!-- include noteModal -->
+<div ng-include="'Views/Partials/NewNoteModal.html'"></div>

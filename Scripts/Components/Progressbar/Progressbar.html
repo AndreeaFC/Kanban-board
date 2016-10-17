@@ -1,10 +1,13 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+﻿<div id="progressbar-{{scope.id}}"></div>
 
-</body>
-</html>
+<button type="button"
+        class="btn btn-default"
+        ng-click="scope.changeValue(1)">
+    <span class="glyphicon glyphicon-plus"></span>
+</button>
+
+<button type="button"
+        class="btn btn-default"
+        ng-click="scope.changeValue(-1)">
+    <span class="glyphicon glyphicon-minus"></span>
+</button>

@@ -1,35 +1,12 @@
-﻿<!-- display notes -->
-<div class="col-md-12">
-    <draggable id="1" body="'Note1'"></draggable>
-    <draggable id="2" body="'Note2'"></draggable>
-    <draggable id="3" body="'Note3'"></draggable>
-    <draggable id="4" body="'Note4'"></draggable>
-    <draggable id="5" body="'Note5'"></draggable>
-    <draggable id="6" body="'Note6'"></draggable>
-</div>
-
-<!-- add note -->
-<!--<div class="col-md-12">
-    <button type="button"
-            class="btn btn-toolbar"
-            data-toggle="modal"
-            data-target="#newNoteModal">
-        <span class="glyphicon glyphicon-plus"></span> Add note
-    </button>
-    <div class="col-md-4" ng-repeat="scope in notes track by $index">
-        <p ng-bind="scope.body"></p>
-    </div>
-</div>-->
-
-<!-- starting Kanban board -->
+﻿<!-- starting Kanban board -->
 <div class="col-md-12 pager page-header">
     <h3 ng-bind="title"></h3>
 </div>
 <div class="col-md-12">
     <table class="col-md-12">
         <tr>
-            <th class="col-md-4 pager jumbotron span6">ToDo</th>
-            <th class="col-md-4 pager jumbotron span6">WIP</th>
+            <th class="col-md-4 pager jumbotron span6">To Do</th>
+            <th class="col-md-4 pager jumbotron span6">Work In Progress</th>
             <th class="col-md-4 pager jumbotron">Done</th>
         </tr>
         <tr>
@@ -40,5 +17,43 @@
     </table>
 </div>
 
-<!-- include noteModal -->
+<!-- progressbar -->
+<div class="col-md-12 pager page-header">
+    <h3>Progressbar</h3>
+    <progressbar id="1" value="25"></progressbar>
+</div>
+
+<!-- display notes -->
+<div class="col-md-12 pager">
+    <h3>Stick these notes!</h3>
+    <!--<draggable id="1" body="'Note1'"></draggable>
+    <draggable id="2" body="'Note2'"></draggable>
+    <draggable id="3" body="'Note3'"></draggable>
+    <draggable id="4" body="'Note4'"></draggable>
+    <draggable id="5" body="'Note5'"></draggable>
+    <draggable id="6" body="'Note6'"></draggable>-->
+    <button type="button"
+            class="btn btn-toolbar"
+            data-toggle="modal"
+            data-target="#newNoteModal"
+            ng-click="addNote()">
+        <span class="glyphicon glyphicon-plus"></span> Add new note
+    </button>
+    <div class="col-md-4" ng-repeat="note in notes track by $index">
+        <draggable id="note.id" body="note.body"></draggable>
+    </div>
+</div>
+
+<!-- add a note -->
+<!--<div class="col-md-12">
+    <button type="button"
+            class="btn btn-toolbar"
+            data-toggle="modal"
+            data-target="#newNoteModal">
+        <span class="glyphicon glyphicon-plus"></span> Add note
+    </button>
+    <button type="button" class="btn btn-toolbar" ng-click="addNote()"></button>
+    
+</div>-->
+
 <div ng-include="'Views/Partials/NewNoteModal.html'"></div>
